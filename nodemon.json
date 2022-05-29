@@ -1,0 +1,12 @@
+{
+  "env":{
+      "PORT":8101,
+       "MYSQL_USER": "username",
+       "MYSQL_PASSWORD": "password",
+       "MYSQL_DATABASE": "database",
+       "MYSQL_HOST": "localhost",
+       "MYSQL_PORT": "3306",
+       
+       "JWT_KEY":"insertanewkey"
+  }
+}
