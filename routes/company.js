@@ -51,9 +51,10 @@ function createCompany(req, res){
                             });
                         }
                         connection.query(
-                            'INSERT INTO Department (name, company_id) VALUES (\'Owner\', (SELECT company_id FROM Company WHERE name = ?));',
+                            
+                            `INSERT INTO Department (name, company_id) VALUES (\'Owner\', ${results.insertId});`,
                             [companyName],
-                            (err, results) => {
+                            (err, results2) => {
                                 connection.release();
                                 if (err) {
                                     return res.status(500).send({
@@ -68,9 +69,9 @@ function createCompany(req, res){
                                         });
                                     }
                                     connection.query(
-                                        'INSERT INTO User (name, surname, email, password, position, department_id, is_adm, is_owner) VALUES (?, ?, ?, ?, ?, (SELECT department_id FROM Department WHERE name = \'Owner\' AND company_id = (SELECT company_id FROM Company WHERE name = ?)), 1, 1);',
-                                        [name, surname, email, hash, position, companyName],
-                                        (err, results) => {
+                                        `INSERT INTO User (name, surname, email, password, position, department_id, is_adm, is_owner) VALUES (?, ?, ?, ?, ?, ${results2.insertId}, 1, 1);`,
+                                        [name, surname, email, hash, position],
+                                        (err, results3) => {
                                             connection.release();
                                             if (err) {
                                                 return res.status(500).send({
