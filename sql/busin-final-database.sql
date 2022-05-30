@@ -37,32 +37,6 @@ CREATE TABLE `Announcement` (
   `time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
---
--- Dumping data for table `Announcement`
---
-
-INSERT INTO `Announcement` (`announcement_id`, `announcement_title`, `announcement_body`, `sender_id`, `time`) VALUES
-(3, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:08:03'),
-(4, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:09:08'),
-(5, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:09:47'),
-(6, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:10:25'),
-(7, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:11:00'),
-(8, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:11:13'),
-(9, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:12:36'),
-(10, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:12:52'),
-(11, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:13:21'),
-(12, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:14:55'),
-(13, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:16:21'),
-(14, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:22:52'),
-(15, 'I came here to announce that we just bought a', 'New purchase', 5, '2022-05-21 20:23:47'),
-(16, 'This is a announcement announcing that i\'m ab', 'Random Announcement', 5, '2022-05-21 20:30:07'),
-(17, 'Announcing that i\'m tired of making announcem', 'Tired of announcements', 5, '2022-05-21 20:32:36'),
-(44, 'New Clothing Policies.', 'Dear Employees,\n\nStarting Monday there is a new clothing policy were flip flops are strictly prohibited. ', 5, '2022-05-28 18:00:46'),
-(49, 'Testing time', '.....', 5, '2022-05-29 15:27:50'),
-(50, 'Testetestest', 'Test', 5, '2022-05-29 15:32:47'),
-(51, 'Testando horario mais uma vez', '...........', 5, '2022-05-29 15:38:56');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `AnnouncementReceiver`
@@ -75,56 +49,7 @@ CREATE TABLE `AnnouncementReceiver` (
   `has_seen` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
---
--- Dumping data for table `AnnouncementReceiver`
---
 
-INSERT INTO `AnnouncementReceiver` (`announcement_id`, `receiver_id`, `time_saw`, `has_seen`) VALUES
-(44, 5, '2022-05-28 18:00:46', 0),
-(44, 6, '2022-05-28 18:00:46', 0),
-(44, 7, '2022-05-28 18:00:46', 0),
-(44, 8, '2022-05-28 18:00:46', 0),
-(44, 9, '2022-05-28 18:00:46', 0),
-(44, 11, '2022-05-28 18:00:46', 0),
-(44, 13, '2022-05-28 18:00:46', 0),
-(44, 14, '2022-05-28 18:00:46', 0),
-(44, 16, '2022-05-28 18:00:46', 0),
-(44, 17, '2022-05-28 18:00:46', 0),
-(44, 18, '2022-05-28 18:00:46', 0),
-(49, 5, '2022-05-29 17:27:51', 0),
-(49, 6, '2022-05-29 17:27:51', 0),
-(49, 7, '2022-05-29 17:27:51', 0),
-(49, 8, '2022-05-29 17:27:51', 0),
-(49, 9, '2022-05-29 17:27:51', 0),
-(49, 11, '2022-05-29 17:27:51', 0),
-(49, 13, '2022-05-29 17:27:51', 0),
-(49, 14, '2022-05-29 17:27:51', 0),
-(49, 16, '2022-05-29 17:27:51', 0),
-(49, 17, '2022-05-29 17:27:51', 0),
-(49, 18, '2022-05-29 17:27:51', 0),
-(49, 20, '2022-05-29 17:27:51', 0),
-(49, 21, '2022-05-29 17:27:51', 0),
-(49, 22, '2022-05-29 17:27:51', 0),
-(49, 23, '2022-05-29 17:27:51', 0),
-(49, 24, '2022-05-29 17:27:51', 0),
-(51, 5, '2022-05-29 17:38:57', 0),
-(51, 6, '2022-05-29 17:38:57', 0),
-(51, 7, '2022-05-29 17:38:57', 0),
-(51, 8, '2022-05-29 17:38:57', 0),
-(51, 9, '2022-05-29 17:38:57', 0),
-(51, 11, '2022-05-29 17:38:57', 0),
-(51, 13, '2022-05-29 17:38:57', 0),
-(51, 14, '2022-05-29 17:38:57', 0),
-(51, 16, '2022-05-29 17:38:57', 0),
-(51, 17, '2022-05-29 17:38:57', 0),
-(51, 18, '2022-05-29 17:38:57', 0),
-(51, 20, '2022-05-29 17:38:57', 0),
-(51, 21, '2022-05-29 17:38:57', 0),
-(51, 22, '2022-05-29 17:38:57', 0),
-(51, 23, '2022-05-29 17:38:57', 0),
-(51, 24, '2022-05-29 17:38:57', 0);
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `Company`
@@ -188,61 +113,6 @@ CREATE TABLE `GroupMessage` (
   `message_body` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
---
--- Dumping data for table `GroupMessage`
---
-
-INSERT INTO `GroupMessage` (`group_message_id`, `sender_id`, `department_id`, `time`, `message_body`) VALUES
-(1, 3, 2, '2022-05-27 23:30:08', 'teste'),
-(2, 2, 2, '2022-05-27 23:46:02', 'blablabla'),
-(4, 3, 2, '2022-05-28 00:34:13', 'oi mariana'),
-(5, 3, 5, '2022-05-28 00:36:13', 'iai'),
-(6, 11, 10, '2022-05-28 06:36:16', 'Ola'),
-(7, 11, 10, '2022-05-28 09:57:24', 'Tudo bom?'),
-(8, 11, 10, '2022-05-28 10:12:55', 'Ola'),
-(9, 9, 10, '2022-05-28 10:44:03', 'eae'),
-(10, 9, 10, '2022-05-28 11:47:27', 'aa'),
-(11, 9, 10, '2022-05-28 12:01:19', 'Teste'),
-(12, 11, 10, '2022-05-28 12:01:24', 'Teste'),
-(13, 11, 10, '2022-05-28 12:15:58', 'teste'),
-(14, 9, 10, '2022-05-28 12:16:57', 'teste'),
-(15, 11, 10, '2022-05-28 12:18:00', 'teste'),
-(16, 11, 10, '2022-05-28 12:18:24', 'teste'),
-(17, 11, 10, '2022-05-28 12:20:25', 'teste'),
-(18, 9, 10, '2022-05-28 12:20:33', 'teste'),
-(19, 9, 10, '2022-05-28 12:20:40', 'teste?'),
-(20, 9, 10, '2022-05-28 12:21:20', 'teste'),
-(21, 9, 10, '2022-05-28 12:26:07', 'teste'),
-(22, 11, 10, '2022-05-28 12:27:23', 'teste'),
-(23, 9, 10, '2022-05-28 12:27:32', 'eaee'),
-(24, 9, 10, '2022-05-28 12:27:40', 'pq n foi'),
-(25, 11, 10, '2022-05-28 12:45:18', 'teste'),
-(26, 11, 10, '2022-05-28 12:45:20', 'eae'),
-(28, 9, 10, '2022-05-28 12:46:20', 'eae'),
-(29, 9, 10, '2022-05-28 12:46:24', 'tudo bom?'),
-(30, 11, 10, '2022-05-28 12:46:57', 'eae trouxa'),
-(31, 11, 10, '2022-05-28 12:47:01', 'tudo bom?'),
-(32, 9, 10, '2022-05-28 12:47:07', 'tudo bom'),
-(33, 11, 9, '2022-05-28 15:55:26', 'Eae'),
-(34, 11, 9, '2022-05-28 15:55:55', 'que'),
-(35, 19, 2, '2022-05-28 16:25:27', 'quem?'),
-(42, 3, 2, '2022-05-28 20:23:19', 'aaaaaaaaaaaaaaa'),
-(43, 3, 2, '2022-05-28 20:23:21', 'aaaaaaaaaaaaa'),
-(44, 3, 2, '2022-05-28 20:23:31', 'carrega :('),
-(45, 3, 2, '2022-05-28 20:29:56', 'teste 1'),
-(46, 3, 2, '2022-05-28 20:29:57', 'teste 2'),
-(47, 3, 2, '2022-05-28 20:29:59', 'teste 3'),
-(48, 3, 2, '2022-05-28 20:30:00', 'teste 4'),
-(49, 3, 2, '2022-05-28 20:30:01', 'teste 5'),
-(50, 3, 2, '2022-05-28 20:30:11', 'teste 6'),
-(51, 3, 2, '2022-05-28 20:30:13', 'teste 7'),
-(52, 3, 2, '2022-05-28 20:30:14', 'teste 8'),
-(53, 3, 2, '2022-05-28 20:30:17', 'teste 9'),
-(54, 3, 2, '2022-05-28 20:30:20', 'teste 10'),
-(55, 3, 2, '2022-05-28 22:56:51', 'teste 11'),
-
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `Message`
@@ -258,40 +128,6 @@ CREATE TABLE `Message` (
   `was_seen` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
---
--- Dumping data for table `Message`
---
-
-INSERT INTO `Message` (`message_id`, `sender_id`, `receiver_id`, `time`, `message_body`, `parent_message_id`, `was_seen`) VALUES
-(299, 11, 5, '2022-05-27 18:07:46', 'Oi clussy', NULL, 1),
-(300, 5, 11, '2022-05-27 18:09:40', 'Test', 299, 1),
-(301, 11, 5, '2022-05-27 18:09:59', 'uai', 300, 1),
-(302, 11, 5, '2022-05-27 18:12:50', 'test', 301, 1),
-(303, 5, 11, '2022-05-27 18:12:55', 'aaa', 302, 1),
-(304, 5, 11, '2022-05-27 18:12:59', 'aaa', 303, 1),
-(305, 11, 5, '2022-05-27 18:13:02', 'testt', 304, 1),
-(306, 5, 11, '2022-05-27 19:08:00', 'test', 305, 1),
-(307, 5, 11, '2022-05-27 19:11:55', 'test', 306, 1),
-(308, 5, 11, '2022-05-27 19:40:31', 'test', 307, 1),
-(309, 5, 11, '2022-05-27 19:42:02', 'test', 308, 1),
-(310, 11, 5, '2022-05-27 19:42:58', 'sua puta', 309, 1),
-(311, 5, 11, '2022-05-27 19:43:08', 'se fuder', 309, 1),
-(312, 5, 11, '2022-05-27 19:43:46', 'test', 311, 1),
-(313, 5, 11, '2022-05-27 19:43:59', 'test', 312, 1),
-(314, 11, 5, '2022-05-27 19:44:05', 'test', 313, 1),
-(315, 5, 11, '2022-05-27 19:46:16', 'test', 314, 1),
-(316, 11, 5, '2022-05-27 19:47:26', 'cansei', 315, 1),
-(317, 11, 5, '2022-05-27 19:51:57', 'test', 316, 1),
-(318, 11, 5, '2022-05-27 19:52:12', 'aa', 317, 1),
-(319, 11, 5, '2022-05-27 19:52:14', 'aaa', 318, 1),
-(320, 11, 5, '2022-05-27 19:52:16', 'aaaaa', 319, 1),
-(328, 11, 5, '2022-05-27 21:40:51', 'eae gay', 326, 1),
-(329, 5, 11, '2022-05-27 21:41:05', 'eae', 328, 1),
-(332, 11, 5, '2022-05-27 21:41:36', '8==========+D', 331, 1),
-(333, 11, 5, '2022-05-28 02:20:43', 'eae \'-\'', 332, 1),
-(334, 5, 16, '2022-05-28 02:32:43', 'kkkkkkk', 327, 1);
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `User`
@@ -332,9 +168,6 @@ INSERT INTO `User` (`user_id`, `name`, `surname`, `position`, `email`, `password
 (17, 'Shelby', 'Nash', 'Support', NULL, NULL, NULL, 10, 0, 0, '97KYR'),
 (18, 'Terry', 'Yates', 'DevOps', NULL, NULL, NULL, 9, 0, 0, 'A9htZ'),
 (19, 'Mariana', 'Nosoy Blanco', 'Tester', 'mariana@gmail.com', '$2b$10$rLo/QOf0tLVqyMZWj37RUOs31qFyftaB1hCZDNT3jdHlgiXtAw6By', NULL, 11, 0, 0, 'WVuuC'),
-(20, 'Jacinto', 'Pinto', 'Recruiter', NULL, NULL, NULL, 10, 0, 0, 'FhHWZ'),
-(21, 'Jacinto', 'Pinto 2', 'Tester', 'jacinto@gmail.com', '$2b$10$/7z/PYexQ708Mi7MOKfR0uk9KDm86hlVCek3P0BwBSnhJ.eWXD/BS', NULL, 13, 0, 0, '1KIaw'),
-(22, 'Omara', 'Chaara', 'Desenvolvedore', 'omara@gmail.com', '$2b$10$y1O6erPhgadSBSXPR5I4aeynQ3fq0hA99ZLUwRoZBww4fZ.sj9gi.', NULL, 9, 0, 0, 'vPgGG'),
 (23, 'Pedre', 'Silve', 'Recrutadore', 'pedre@gmail.com', '$2b$10$diw.V5N63GTJTLTpGQ2fjedNC4.inKxONFZU92L8rTfivy8QU69kG', NULL, 10, 0, 0, '5xcSy'),
 (24, 'Jair', 'Bolsonaro', 'Capitão', 'bolsonaro@gmail.com', '$2b$10$br7kbw5Ynp4.aDzMHxDTTewA5X7xI2n1jfAAIdGxlpa8UG7i7IcLK', NULL, 13, 0, 0, 'gIAqK');
 
